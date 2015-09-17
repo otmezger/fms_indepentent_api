@@ -1,0 +1,16 @@
+{
+  "name": "fms_indepentent_api",
+  "version": "0.0.0",
+  "description": "rest api for fix my street",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-generator": "^4.13.1",
+    "pg": "^4.4.1"
+  }
+}
