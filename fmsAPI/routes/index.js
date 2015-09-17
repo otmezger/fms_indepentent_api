@@ -76,7 +76,7 @@ router.get('/api/v1/problems/:problem_id',function(req,res){
     });
 });
 
-router.get('/api/v1/comments/:problem_id',function(req,res){
+router.get('/api/v1/problems/:problem_id/comments',function(req,res){
 	// Get a Postgres client from the connection pool
 	var problem_id = req.params.problem_id;
 	var results = [];
