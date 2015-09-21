@@ -1,3 +1,4 @@
 node_modules/*
 node_modules
 node_modules/
+onlineChecker/onlineCheckResults.json
