@@ -29,7 +29,7 @@ session.on ("error", function (error) {
 
 for (var i = 0; i < targets.length; i++) {
 	session.pingHost (targets[i], function (error, target) {
-		var now = moment().format('YYYY-MM-DD H:m:s')
+		var now = moment().format('YYYY-MM-DD HH:mm:ss')
 		output.now = now;
 		output.target = target;
 		if (error){
@@ -48,15 +48,16 @@ for (var i = 0; i < targets.length; i++) {
 			output.string = 'ok';
 		}
 		console.log(JSON.stringify(output));
-		if (output.string !='ok'){
+		if (output.string != 'ok'){
        			var fs = require('fs');
         		//fs.writeFile(outputFile, JSON.stringify(output), function(err) {
 			fs.appendFile(outputFile, JSON.stringify(output) + ",\n", function(err) {
                 		if(err) {
-                        		return console.log(err);
+                   	    	 	return console.log(err);
                 		}
                 		console.log("The file was saved!");
-        		});
+        		
+			});
 		}	
 	});
 	/*
